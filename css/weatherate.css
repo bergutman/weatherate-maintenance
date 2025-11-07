@@ -1,0 +1,122 @@
+/* Bootstrap overrides and other WeatheRate-specific styles/adjustments */
+/* (c) WeatherRate. All Rights Reserved. * Issues? Notify Steve Panhorst of panhorst.net */
+html {
+	min-height:			101%;				/*always apply vertical scrollbar to prevent left/right shift*/
+}
+body {
+	background-color:	#8FB9D9;			/*logo light blue*/
+	padding-top:		56px;				/*leaves space for static navbar*/
+	padding-bottom:		102px;				/*leaves space for anchored footer*/
+	min-height:			100vh;				/*allows footer to be anchored to bottom*/
+	position:			relative;			/*allows footer to be anchored to bottom*/
+	margin:				0;					/*allows footer to be anchored to bottom*/
+}
+footer {									/*anchors footer to bottom but scrolls along with page*/
+	position:			absolute;
+	bottom:				0;
+}
+a {
+	font-weight:		bold;				/*thicker link text*/
+}
+hr {										/*horizontal bar (divider) in logo orange, rounded edges*/
+    border: 			4px solid #F09248;
+    border-radius: 		12px;
+}
+.page {										/*left/right page border (for non-header/footer components)*/
+	padding-left:		2rem!important;
+	padding-right:		2rem!important;
+}
+.bg-primary,.btn-primary,.table-primary,.table-primary>td,.table-primary>th {
+	background-color:	#236AAA!important;	/*logo dark blue*/
+}
+.btn-secondary {
+	background-color:	#F09248!important;	/*logo orange*/
+}
+.border-primary {
+	border-color:		#236AAA!important;	/*logo dark blue*/
+}
+.bg-secondary {
+	background-color:	#8FB9D9!important;	/*accent light blue*/
+}
+.text-secondary {
+	color:				#8FB9D9!important;	/*accent light blue*/
+}
+.text-accent {
+	color:				#F09248!important;	/*logo orange*/
+}
+.text-forecast-button {
+	color:				#236AAA!important;	/*logo dark blue*/
+}
+.bg-black {
+	background-color:	#000000!important;	/*black*/
+}
+table.table, table.table > thead > tr > th, table.table > tbody > tr > td {
+	border-color:		#236AAA!important;	/*sets color of line divider in tables to logo blue*/
+}
+.table-md td,.table-md th {
+	padding:			.5rem 0;			/*tighter padding on spots.html side-by-side table*/
+}
+.smallspots {								/*maximum width of large screen side-by-side videos*/
+	max-width:			512px;
+}
+.carousel,.notsowide {						/*maximum carousel width so that pictures are not distorted*/
+	max-width: 			1024px;				/*maximum other element width so it is not enormous*/
+}
+.overlay {									/*for overlaying static logo on top of carousel images*/
+	position:			absolute;
+	z-index:			10;
+}
+.lowercase {								/*makes input field lowercase only*/
+	text-transform:		lowercase;
+}
+.text-outline {								/*outlines each text letter in black 1px for clarity on background*/
+	text-shadow: 		-1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;	
+}
+.temperature {								/*fixed width for temperature input field on "enter forecast" page*/
+	width:				100px;
+}
+@media (max-width: 576px) {					/*Makes dropdown navbar item scrollable for mobile*/
+	.dropdown-menu {
+		max-height: 	240px;
+		overflow-y: 	auto;
+	}
+}
+table.table-with-orange > tbody > tr:nth-child(odd) > td {
+    border-top:         2px solid #F09248!important;    /*sets color of market/city divider in tables to logo orange*/
+}
+
+#navbar-admin {
+    padding-top: 0px;
+    margin-top: -56px; /* hack to undo navbar padding */
+}
+
+.card {
+    min-width: 300px;
+}
+
+#xpic_sm_map{
+    width: 1.3em !important;
+}
+
+#radarloop-iframe-container {
+	display: flex;
+	margin-bottom: 5vh;
+}
+
+/* Default for all browsers, including Firefox */
+#radarloop-map {
+	width: 50%;
+	height: max-content;
+}
+
+#radarloop-frame {
+	width: 50%;
+	height: 800px;
+}
+
+/* Attempt to override for browsers that might support 'height: intrinsic' */
+@supports (height: intrinsic) {
+	#radarloop-map {
+		height: intrinsic;
+	}
+}

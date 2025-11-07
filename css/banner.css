@@ -1,0 +1,112 @@
+/* Banner styles for WeatheRate site - positioned at bottom and dismissable */
+.banner {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    border-top: 2px solid #ff9900;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 9998;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-out;
+}
+
+/* Hide banner when checkbox is checked */
+#banner-toggle:checked ~ .banner {
+    transform: translateY(100%);
+}
+
+.banner-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    line-height: 1.4;
+    position: relative;
+    padding-right: 40px;
+}
+
+.close-button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust body padding to account for fixed banner at bottom */
+body {
+    padding-bottom: 80px !important;
+}
+
+/* Remove padding when banner is hidden */
+#banner-toggle:checked ~ body {
+    padding-bottom: 0 !important;
+}
+
+/* Hide the checkbox */
+#banner-toggle {
+    display: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .banner {
+        font-size: 14px;
+        padding: 12px 15px;
+    }
+
+    .banner-content {
+        padding-right: 35px;
+    }
+
+    .close-button {
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+    }
+
+    body {
+        padding-bottom: 70px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        font-size: 13px;
+        padding: 10px 12px;
+    }
+
+    .banner-content {
+        padding-right: 30px;
+    }
+
+    .close-button {
+        width: 22px;
+        height: 22px;
+        font-size: 16px;
+    }
+
+    body {
+        padding-bottom: 65px !important;
+    }
+}

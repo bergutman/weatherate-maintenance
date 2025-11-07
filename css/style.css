@@ -1,0 +1,202 @@
+.precip-auto {
+    background-color: #CCCCFF;
+}
+
+.precip-big {
+    background-color: #9999FF;
+}
+
+.precip-exception {
+    background-color: #FFFF99;
+}
+
+.precip-blank {
+    background-color: #DDDDDD;
+}
+
+.met_entered {
+    background-color: #00FF00;
+}
+
+ul[id*="sky_precip"] {
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul[id*="skyprecip"] {
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul[id*="snow"] {
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul[id*="additional"] {
+    list-style-type: none;
+    padding-left: 0px;
+}
+ul[id*="precip_time"] {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+ul.errorlist {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.bulk-station-header {
+    width: 300px;
+}
+.bulk-temperature-header {
+    width: 250px;
+}
+.bulk-conditions-header {
+    width: 300px;
+}
+
+.obs-temperature-header {
+    width: 100px;
+}
+
+.field-wrapper {
+    text-align: center;
+    vertical-align: middle;
+    margin: 0px;
+    padding: 0px !important;
+}
+
+
+/* gets the label that is immediately after a disabled input type=checkbox */
+input[type=checkbox]:disabled+label {
+    /* and changes its color to gray */
+    color: gray;      
+}
+
+table.month td {
+    border: 1px solid rgb(221, 221, 221);
+    padding: 10px;
+    text-align: center;
+}
+table.month th {
+    padding: 2px 0px;
+    text-align: center;
+}
+
+table.month {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.left-prev {
+    align-self: flex-start;
+}
+
+.right-next {
+    align-self: flex-start;
+}
+
+.precip-map {
+    align-self: center;
+    margin-right: 50px;
+}
+
+.observation-verification-flex {
+    display: inline-flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.observation-verification {
+    align-self: center;
+}
+
+.bulk-calendar {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.observation-top {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.observation-left {
+    float: left;
+}
+
+.observation-right {
+    display: inline-block;
+    margin-left: 100px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.observation-verification-right {
+    display: inline-block;
+    margin-left: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.observation-entry {
+    width: 100%;
+}
+
+
+ul[id^="obs_id_form"] li{
+    display: inline-block;
+}
+
+.observation-entry tr:nth-child(odd) {
+    /* background: rgba(0,0,0,.1); */
+    border-top-style: solid;
+}
+
+/* No longer need this padding as the navbar on the admin screens is no longer sticky */
+/* .anchor { padding-top: 70px; } */
+
+/* remove spinners */
+input[type='number'] {
+    -moz-appearance:textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+#navbar {
+    padding-bottom: 10px;
+}
+
+.container-wide {
+    max-width: 1800px;
+    width: 100%;
+    min-width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.container-verification-wide {
+    /*text-align: center;*/
+}
+
+.placeholder {
+    z-index: -1;
+}
+
+.radio-inline div {
+    display: inline;
+}
