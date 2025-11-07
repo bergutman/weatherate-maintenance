@@ -12,10 +12,10 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="css/style.css" type="text/css" />
-        <link rel="stylesheet" href="css/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/weatherate.css" />
-        <link rel="stylesheet" href="css/banner.css" />
+        <link rel="stylesheet" href="../css/style.css" type="text/css" />
+        <link rel="stylesheet" href="../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../css/weatherate.css" />
+        <link rel="stylesheet" href="../css/banner.css" />
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -23,12 +23,16 @@
             crossorigin="anonymous"
         />
         <!-- favicon -->
-        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <link
+            rel="shortcut icon"
+            href="../img/favicon.ico"
+            type="image/x-icon"
+        />
+        <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
-            href="img/apple-icon-57x57.png"
+            href="../img/apple-icon-57x57.png"
         />
         <link
             rel="apple-touch-icon"
@@ -105,12 +109,19 @@
         <style type="text/css"></style>
     </head>
     <body>
+        <input type="checkbox" id="banner-toggle" />
         <div class="banner">
             <div class="banner-content">
-                Hello. The WeatheRate site is presently down due to a server
-                issue. We are currently working on a speedy return to normal
-                operations, but we do not have an ETA at this time. Thank you
-                for your patience.
+                The authenticated portion of the WeatheRate site is presently
+                down due to a server issue. We are currently working on a speedy
+                return to normal operations, but we do not have an ETA at this
+                time. Thank you for your patience.
+                <label
+                    for="banner-toggle"
+                    class="close-button"
+                    aria-label="Close banner"
+                    >×</label
+                >
             </div>
         </div>
         <div id="navbar">
@@ -142,7 +153,7 @@
                         <input
                             type="hidden"
                             name="csrfmiddlewaretoken"
-                            value="EbTj2LWBRVqD6qjkG2SuVp3HaWN5ubJFjMVl4llGFB5bIVQuTYaNpS2A3V6IinN7"
+                            value="UVlYlorFA8osBKFO96gZ4hFoRRV9aEBfzwn0nYQKoO30dfcYm2yiyKEhKQeMYQFH"
                         />
                         <div class="form-group">
                             <select
@@ -219,7 +230,7 @@
                         >
                             <a class="nav-link" href="/news/">News</a>
                         </li>
-                        <!--
+
                         <li
                             class="nav-item dropdown"
                             data-toggle="collapse"
@@ -345,263 +356,214 @@
                                     >Sign Out</a
                                 >
                             </div>
-                        </li> -->
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
         <div id="header">
-            <!-- header with captioned image carousel -->
-            <div>
-                <div
-                    id="carouselCaptions"
-                    class="carousel slide mx-auto"
-                    data-ride="carousel"
-                >
-                    <ol class="carousel-indicators">
-                        <li
-                            data-target="#carouselCaptions"
-                            data-slide-to="0"
-                            class="active"
-                        ></li>
-                        <li
-                            data-target="#carouselCaptions"
-                            data-slide-to="1"
-                        ></li>
-                        <li
-                            data-target="#carouselCaptions"
-                            data-slide-to="2"
-                        ></li>
-                        <li
-                            data-target="#carouselCaptions"
-                            data-slide-to="3"
-                        ></li>
-                        <li
-                            data-target="#carouselCaptions"
-                            data-slide-to="4"
-                        ></li>
-                    </ol>
-                    <div class="carousel-inner">
-                        <div class="overlay w-100 py-3 px-2">
-                            <img
-                                src="img/logo-transparent-100y.png"
-                                width="379"
-                                height="100"
-                                class="img-fluid d-block mx-auto"
-                            />
-                        </div>
-                        <!-- caption for all carousel items on small displays, since those are not wide enough for the quotes -->
-                        <div class="overlay w-100 pt-5 d-md-none">
-                            <p>&nbsp;</p>
-                            <p
-                                class="text-center pt-5 font-weight-bold text-white text-outline"
-                            >
-                                The TV Weather Forecast<br />Verification
-                                Experts
-                            </p>
-                        </div>
-                        <div class="carousel-item active" data-interval="7000">
-                            <img
-                                src="img/IMG_0429-1024x271.jpg"
-                                class="d-block w-100"
-                                height="271"
-                                alt="sunlit thunderstorm"
-                            />
-                            <div class="carousel-caption d-none d-md-block">
-                                <blockquote class="blockquote text-center">
-                                    <p
-                                        class="mb-0 small font-weight-bold text-outline"
-                                    >
-                                        "I work outdoors every day, so accurate
-                                        weather forecasts are very important to
-                                        me. When WeatheRate announces the
-                                        winners, I'll know who to trust."<br />
-                                        — Manuel L., Portland, OR
-                                    </p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-interval="7000">
-                            <img
-                                src="img/58-clouds-sunset.jpg"
-                                class="d-block w-100"
-                                height="271"
-                                alt="clouds"
-                            />
-                            <div class="carousel-caption d-none d-md-block">
-                                <blockquote class="blockquote text-center">
-                                    <p
-                                        class="mb-0 small font-weight-bold text-outline"
-                                    >
-                                        "I travel quite a bit for work. Soon
-                                        I'll know what local TV station to tune
-                                        in to get an accurate forecast when I'm
-                                        on the road."<br />
-                                        — Frank L., Staten Island, NY
-                                    </p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-interval="7000">
-                            <img
-                                src="img/standing-lenticular-1024x271.jpg"
-                                class="d-block w-100"
-                                height="271"
-                                alt="standing lenticular cloud"
-                            />
-                            <div class="carousel-caption d-none d-md-block">
-                                <blockquote class="blockquote text-center">
-                                    <p
-                                        class="mb-0 small font-weight-bold text-outline"
-                                    >
-                                        "Mountain weather is very different than
-                                        it is here in the valley. We always
-                                        check the WeatheRate certified forecast
-                                        before heading up to the cabin."<br />
-                                        — Steve P., Salt Lake City, UT
-                                    </p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-interval="7000">
-                            <img
-                                src="img/12-lightning.jpg"
-                                class="d-block w-100"
-                                height="271"
-                                alt="lightning"
-                            />
-                            <div class="carousel-caption d-none d-md-block">
-                                <blockquote class="blockquote text-center">
-                                    <p
-                                        class="mb-0 small font-weight-bold text-outline"
-                                    >
-                                        "From soccer to baseball, my family
-                                        spends a lot of time outdoors.... We're
-                                        excited to find out who's the most
-                                        accurate in Dallas."<br />
-                                        — Katy P., Dallas, TX
-                                    </p>
-                                </blockquote>
-                            </div>
-                        </div>
-                        <div class="carousel-item" data-interval="7000">
-                            <img
-                                src="img/IMG_0382_cropped-1024x271.jpg"
-                                class="d-block w-100"
-                                height="271"
-                                alt="snowy road"
-                            />
-                            <div class="carousel-caption d-none d-md-block">
-                                <blockquote class="blockquote text-center">
-                                    <p
-                                        class="mb-0 small font-weight-bold text-outline"
-                                    >
-                                        "Driving to work during a lake effect
-                                        snowstorm is dangerous, especially if
-                                        I'm not prepared. That's why I always
-                                        watch the local WeatheRate certified TV
-                                        station."<br />
-                                        — Erin H., Syracuse, NY
-                                    </p>
-                                </blockquote>
-                            </div>
-                        </div>
-                    </div>
-                    <a
-                        class="carousel-control-prev"
-                        href="#carouselCaptions"
-                        role="button"
-                        data-slide="prev"
-                    >
-                        <span
-                            class="carousel-control-prev-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a
-                        class="carousel-control-next"
-                        href="#carouselCaptions"
-                        role="button"
-                        data-slide="next"
-                    >
-                        <span
-                            class="carousel-control-next-icon"
-                            aria-hidden="true"
-                        ></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
+            <!-- header without captioned image carousel -->
+            <div class="py-3 px-2">
+                <img
+                    src="../img/logo-transparent-100y.png"
+                    width="379"
+                    height="100"
+                    class="img-fluid d-block mx-auto"
+                />
             </div>
         </div>
 
         <div id="page">
             <div class="container">
-                <h4 class="py-4 text-center">Welcome to WeatheRate!</h4>
-                <p class="text-center">
-                    We verify the accuracy of TV weather forecasts and tell you
-                    who's the best in your city.
-                </p>
-                <p class="text-center">
-                    Whether you need to know if it's going to rain today, or if
-                    frost will damage your plants tonight, tune in to your local
-                    WeatheRate certified TV station.
-                </p>
-
-                <img
-                    src="img/weatherate_pin.png"
-                    width="31"
-                    height="44"
-                    class="img-fluid d-block mx-auto"
-                />
-
-                <h4 class="py-4 text-center">About WeatheRate</h4>
+                <h4 class="py-4 text-center">Frequently Asked Questions</h4>
                 <p class="text-justify">
-                    Bruce Fixman, our company founder and President, is a
-                    meteorologist. In a previous life he forecasted weather for
-                    radio, television, newspapers, trucking companies and
-                    government agencies. You may have heard him on the air in
-                    New York City, Philadelphia and many other cities across the
-                    country.
+                    <span class="font-weight-bold"
+                        >Does WeatheRate make weather forecasts?</span
+                    ><br />
+                    No, we just verify who makes the most accurate weather
+                    forecasts in your city.
                 </p>
                 <p class="text-justify">
-                    Tired of every TV station claiming to be the most accurate,
-                    pinpoint or simply the best in town, Bruce developed
-                    WeatheRate. WeatheRate is the only independent television
-                    weather forecast verification company in the United States;
-                    perhaps even the world.
-                </p>
-                <p class="text-justify pb-3">
-                    Our patented WeatherTracker II software compares your local
-                    TV weather forecasts with observed conditions to reveal
-                    who's the most accurate. Because WeatheRate is not
-                    affiliated with any TV stations or the companies that own
-                    them, we tell you who's really most accurate in your
-                    WeatheRated city.
-                </p>
+                    <span class="font-weight-bold"
+                        >Can you tell me more about the WeatheRate rating
+                        process?</span
+                    ><br />
 
-                <img
-                    src="img/weatherate_pin.png"
-                    width="31"
-                    height="44"
-                    class="img-fluid d-block mx-auto"
-                />
-
-                <h4 class="py-4 text-center">Contact WeatheRate</h4>
-                <p class="text-center">WeatheRate, Inc.</p>
-                <p class="text-center">
-                    <span class="bg-primary py-1"
-                        >&nbsp;<a href="tel:6029098429"
-                            ><i class="fas fa-phone text-accent"></i>&nbsp;<span
-                                class="text-accent"
-                                >602-909-8429</span
-                            ></a
-                        >&nbsp;</span
-                    >
+                    Every day, 365 days per year, WeatheRate employees review
+                    the four-day forecasts from local TV stations in major U.S.
+                    metropolitan areas. WeatheRate also obtains local observed
+                    weather data. The forecast and observed weather data are fed
+                    into our patented software, WeatherTracker II, which
+                    compares the forecast with the actual observed conditions.
+                    Through a series of mathematical calculations, we determine
+                    which TV stations have the best daily, weekly and monthly
+                    accuracy. Then, every March, we offer our seal of approval
+                    to the TV station that provides the most accurate weather
+                    forecasts in our WeatheRated Cities.
                 </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >What weather conditions does WeatheRate track?</span
+                    ><br />
 
-                <p class="py-3 text-center">
-                    Send us an <a href="https://aemail.com/W7n4">email</a>
+                    WeatheRate verifies high and low temperatures, sky cover,
+                    precipitation, snow accumulation, wind and fog. Accuracy in
+                    predicting severe weather and timing of precipitation also
+                    comes into play.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >Can you tell me more about observed weather conditions
+                        that make a forecast accurate...like what does
+                        WeatheRate consider windy?</span
+                    ><br />
+                    The following definitions are used for actual sky condition,
+                    precipitation and other weather phenomena:
+                </p>
+                <ul>
+                    <li class="text-justify">
+                        Mostly Cloudy to Overcast: Approximately 2/3 of the
+                        forecast period hours are Mostly Cloudy or Overcast.
+                    </li>
+                    <li class="text-justify">
+                        Sunny/Clear to Partly Cloudy: When Mostly Cloudy to
+                        Cloudy verification criteria is not met and there is no
+                        measurable or non-accumulating snow/mixed precipitation.
+                    </li>
+                    <li class="text-justify">
+                        Rain: One-hundredth of one inch (0.01") or greater
+                        during the forecast period.
+                    </li>
+                    <li class="text-justify">
+                        Snow: Several snow accumulation levels are used: (1)
+                        None, (2) 0.1" to 1.0", (3) 1.1" to 3.0", (4) 3.1" to
+                        6.0" and (5) greater than 6.0".
+                    </li>
+                    <li class="text-justify">
+                        Ice: Sleet or freezing rain is the main weather event
+                        during the forecast period.
+                    </li>
+                    <li class="text-justify">
+                        Mixed: A mixture of rain, sleet, freezing rain or snow
+                        during the forecast period.
+                    </li>
+                    <li class="text-justify">
+                        Windy: Average forecast period wind speed is 14 mph or
+                        greater, or six hours with wind gusts of 20 mph or
+                        greater.
+                    </li>
+                    <li class="text-justify">
+                        Fog: Visibility one-quarter mile or less for at least
+                        four hours.
+                    </li>
+                    <li class="text-justify">
+                        Thunderstorm: A thunderstorm is observed in the area
+                        during the forecast period.
+                    </li>
+                    <li class="text-justify">
+                        Severe Thunderstorm: Wind gust of 58 mph or stronger, or
+                        hail one inch (1") or larger, same as the National
+                        Weather Service's criteria.
+                    </li>
+                </ul>
+                <p></p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >Is WeatheRate affiliated with any weather forecasting
+                        companies, television stations or government
+                        agencies?</span
+                    ><br />
+
+                    No. WeatheRate is the only independent, non-partisan,
+                    weather verification company in the United States. And
+                    that's why you can trust us to tell you who's really the
+                    most accurate in your WeatheRated city!
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >Can you tell me more about your certification and
+                        licensing process?</span
+                    ><br />
+
+                    Since March 2003, WeatheRate has been verifying weather
+                    forecast accuracy for 350+ TV stations in 90 U.S. cities
+                    every day. The most accurate station in each TV market is
+                    offered the opportunity to license the WeatheRate seal of
+                    approval for advertising and promotional purposes. Stations
+                    that promote their WeatheRate seal of approval pay us a fee.
+                    The money is used to cover administrative costs, and a
+                    portion is set aside for disaster relief contributions.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >How come station X won last year and station Y is now
+                        most accurate?</span
+                    ><br />
+
+                    From March 2003 through February 2005 WeatheRate conducted
+                    four six-month verification periods. At the end of each
+                    research period, only the most accurate station in each TV
+                    market was offered the opportunity to license the WeatheRate
+                    seal of approval. A station that won one research period may
+                    not have proven to be most accurate during another, thus the
+                    WeatheRate seal of approval was offered to a different
+                    station. Although the same stations won again and again in
+                    most markets, there were lead changes in other markets. In
+                    March 2005 we began a one-year verification and license
+                    period, just like J.D. Power does for automobiles.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >How does WeatheRate ensure that its studies are
+                        unbiased?</span
+                    ><br />
+
+                    To maintain an unbiased, third-party perspective, WeatheRate
+                    funds its own research using a patented process. TV stations
+                    do not pay to participate in the WeatheRate rating surveys.
+                    We offer the WeatheRate seal of approval to only the most
+                    accurate TV stations in order to recoup our investment. This
+                    independent position enables us to provide the general
+                    public with credible and accurate findings.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >What happens if the most accurate station in my city
+                        chooses to not be affiliated with WeatheRate?</span
+                    ><br />
+
+                    The second most accurate station is NOT offered the
+                    WeatheRate seal of approval. WeatheRate only certifies the
+                    station that is truly the most accurate in each city.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >Where does WeatheRate get their observed weather
+                        data?</span
+                    ><br />
+
+                    Most of the observed data including high &amp; low
+                    temperatures, wind speed and sky cover come from a specific
+                    weather verification site in or near your city. However,
+                    because some weather may only affect parts of a city, like
+                    thunderstorms, WeatheRate monitors conditions across your
+                    metro area. So, if thunderstorms don't affect our official
+                    verification site, but they do rumble through a large part
+                    of the metro area, a TV station that forecasted
+                    thunderstorms would be correct.
+                </p>
+                <p class="text-justify">
+                    <span class="font-weight-bold"
+                        >Is it true that WeatheRate donates money to storm
+                        victims?</span
+                    ><br />
+
+                    Yes! WeatheRate sets aside a percentage of sales for victims
+                    of weather-related disasters. The WeatheRate Relief Fund is
+                    distributed to the Red Cross or other agencies at our
+                    discretion. While we don't forecast hurricanes, tornadoes or
+                    other catastrophes, we care about the people affected by
+                    them, and we want to help those victims weather the storm.
                 </p>
             </div>
         </div>
@@ -636,10 +598,10 @@
             </div>
         </footer>
         <script
-            src="/static/weatherate/scripts/jquery-3.3.1.slim.min.js"
+            src="js/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         ></script>
-        <script src="/static/weatherate/scripts/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
         <script type="text/javascript">
             var gaJsHost =
