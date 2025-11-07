@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
     <head>
         <meta charset="UTF-8" />
@@ -12,9 +13,10 @@
             content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="../css/style.css" type="text/css" />
-        <link rel="stylesheet" href="../css/bootstrap.min.css" />
-        <link rel="stylesheet" href="../css/weatherate.css" />
+        <link rel="stylesheet" href="../../css/style.css" type="text/css" />
+        <link rel="stylesheet" href="../../css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../css/weatherate.css" />
+        <link rel="stylesheet" href="../../css/banner.css" />
         <link
             rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
@@ -111,7 +113,7 @@
 
         <link
             rel="stylesheet"
-            href="../css/dataTables.bootstrap4.min.css"
+            href="../../css/dataTables.bootstrap4.min.css"
             type="text/css"
             media="screen"
             title="no title"
@@ -121,6 +123,21 @@
         <style type="text/css"></style>
     </head>
     <body>
+        <input type="checkbox" id="banner-toggle" />
+        <div class="banner">
+            <div class="banner-content">
+                The authenticated portion of the WeatheRate site is presently
+                down due to a server issue. We are currently working on a speedy
+                return to normal operations, but we do not have an ETA at this
+                time. Thank you for your patience.
+                <label
+                    for="banner-toggle"
+                    class="close-button"
+                    aria-label="Close banner"
+                    >×</label
+                >
+            </div>
+        </div>
         <div id="navbar">
             <!-- navigation bar with language selector -->
 
@@ -227,7 +244,7 @@
                         >
                             <a class="nav-link" href="/news/">News</a>
                         </li>
-
+                        <!-- --
                         <li
                             class="nav-item dropdown"
                             data-toggle="collapse"
@@ -353,7 +370,7 @@
                                     >Sign Out</a
                                 >
                             </div>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -362,7 +379,7 @@
             <!-- header without captioned image carousel -->
             <div class="py-3 px-2">
                 <img
-                    src="../img/logo-transparent-100y.png"
+                    src="../../img/logo-transparent-100y.png"
                     width="379"
                     height="100"
                     class="img-fluid d-block mx-auto"
@@ -373,7 +390,7 @@
         <div id="page">
             <div class="container">
                 <script
-                    src="../js/jquery-3.5.1.slim.min.js"
+                    src="../../js/jquery-3.5.1.slim.min.js"
                     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
                 ></script>
                 <script type="text/javascript">
@@ -733,6 +750,8 @@
                     Please check back soon for updated WeatheRated cities
                     information!
                 </p>
+                <br />
+                <br />
             </div>
         </div>
 
@@ -766,18 +785,23 @@
             </div>
         </footer>
         <script
-            src="../js/jquery-3.3.1.slim.min.js"
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
         ></script>
-        <script src="../js/bootstrap.min.js"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+            crossorigin="anonymous"
+        ></script>
 
         <script
             type="text/javascript"
-            src="../js/jquery.dataTables.min.js"
+            src="../../js/jquery.dataTables.min.js"
         ></script>
         <script
             type="text/javascript"
-            src="../js/dataTables.bootstrap4.min.js"
+            src="../../js/dataTables.bootstrap4.min.js"
         ></script>
 
         <script type="text/javascript">
